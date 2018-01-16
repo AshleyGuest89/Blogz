@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+    <head>
+        <title>{{title}}</title>
+        <style>
+            .error { color: red;}
+            .entry {margin: 10px 0;
+
+                width: 540px;
+
+                height: 120px;}
+        </style>
+    </head>
+<body>
+
+    <div id="navi">
+        <article>
+            <p>
+                <a href="/">Main Blog Page</a>
+                <a href="/newpost">Add a new entry</a>
+            </p>
+        </article>
+    </div>
+    {% block content %}
+    {% endblock %}
+
+</body>
+</html>
