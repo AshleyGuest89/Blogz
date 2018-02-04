@@ -4,6 +4,9 @@
     {% for posts in post %}
         <h2>{{posts.title}}</h2>
         <p>{{posts.entry}}</p>
+        <p>    
+                Written By: <a href="/blogs?user={{posts.owner.username}}">{{posts.owner.username}}</a>
+        </p>
     {% endfor %}
 
 {% endblock %}

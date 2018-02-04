@@ -16,11 +16,24 @@
     <div id="navi">
         <article>
             <p>
-                <a href="/">Main Blog Page</a>
+                <a href="/">Home</a>
+                <a href="/blogs">All Blogs</a>
                 <a href="/newpost">Add a new entry</a>
+                <a href="/login"> Log In</a>
+                <a href="/register">Sign Up</a>
+                <a href='/logout'>Log Out</a>
             </p>
         </article>
     </div>
+
+    {% with messages = get_flashed_messages(with_categories=True) %}
+    <ul>
+    {% for category,message in messages %}
+        <li class="{{category}}">{{message}}</li>
+    {% endfor %}
+    </ul>
+    {% endwith %}
+
     {% block content %}
     {% endblock %}
 

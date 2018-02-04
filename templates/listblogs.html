@@ -2,7 +2,7 @@
 
 {% block content %}
 
-    <h1>Build A Blog</h1>
+    <h1>Blogz!</h1>
 
 
     {% if blogs|length == 0 %}
@@ -14,6 +14,9 @@
             </p>
             <p>
                 {{blog.entry}}
+            </p>
+            <p>    
+                Written By: <a href="/blogs?user={{blog.owner.username}}">{{blog.owner.username}}</a>
             </p>
            <hr />
             {% endfor %}
